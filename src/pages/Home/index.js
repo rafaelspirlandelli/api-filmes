@@ -14,8 +14,7 @@ function Home() {
          .then(response => response.json())
          .then(data => setMovies(data.results))
 
-    }, [API_KEY])
-
+    })
 
     return (
         <Container>

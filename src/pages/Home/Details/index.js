@@ -26,7 +26,7 @@ useEffect (() => {
         setMovie(movie)
 })
 
-}, [id, API_KEY])
+})
 
     return (
         <Container>
