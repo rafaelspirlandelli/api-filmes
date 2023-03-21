@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { Container } from "./styles"
+import API_KEY from ".env";
 
 function Details(){
 
@@ -9,8 +10,9 @@ const { id } = useParams()
 const [movie, setMovie] = useState ({})
 const image_path = 'http://image.tmdb.org/t/p/w185/'
 
+
 useEffect (() => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=fe65f8e840e15d06c5c00bf13084da74&language=pt-BR&page=1`)
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=pt-BR&page=1`)
     .then(response => response.json())
     .then(data => {
         const {title, poster_path, overview, release_date} = data
