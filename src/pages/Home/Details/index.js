@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { Container } from "./styles"
-import API_KEY from ".env";
 
 function Details(){
 
@@ -9,6 +8,7 @@ const { id } = useParams()
 
 const [movie, setMovie] = useState ({})
 const image_path = 'http://image.tmdb.org/t/p/w185/'
+const API_KEY = process.env.REACT_APP_API_KEY
 
 
 useEffect (() => {
@@ -26,7 +26,7 @@ useEffect (() => {
         setMovie(movie)
 })
 
-}, [id])
+}, [id, API_KEY])
 
     return (
         <Container>

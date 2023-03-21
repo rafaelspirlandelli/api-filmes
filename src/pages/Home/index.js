@@ -1,12 +1,12 @@
 import { Container, MovieList, Movie } from "./style";
 import { useState, useEffect} from "react";
 import { Link } from "react-router-dom";
-import API_KEY from ".env";
 
 function Home() {
 
     const [movies, setMovies] = useState([])
     const image_path = 'http://image.tmdb.org/t/p/w185/'
+    const API_KEY = process.env.REACT_APP_API_KEY
 
     useEffect(() => {
 
@@ -14,7 +14,7 @@ function Home() {
          .then(response => response.json())
          .then(data => setMovies(data.results))
 
-    }, [])
+    }, [API_KEY])
 
 
     return (
