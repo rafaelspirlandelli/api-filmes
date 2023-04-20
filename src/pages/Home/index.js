@@ -18,8 +18,10 @@ function Home() {
 
     return (
         <Container>
-        <h1>Catálogo de Filmes</h1>
-        <h2>Lançamentos</h2>
+            <div className="header">
+            <h1>Catálogo de Filmes</h1>
+            <h2>Lançamentos</h2>
+            </div>
         <MovieList>
                  {movies.map(movie => {
             return (

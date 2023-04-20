@@ -3,14 +3,13 @@ import styled from "styled-components"
  export const Container = styled.div`
     h1 {
         text-align: center;
-        margin: 4rem 0%
+        margin: 1rem 0%       
     }
 
-h2 {
-    text-align: center;
-    margin: 5rem 0%
-}
-
+    h2 {
+        text-align: center;
+        margin: 5rem 0%
+    }
 `
 
 
@@ -41,5 +40,9 @@ export const Movie = styled.li`
         font-size: 120%;
         text-align: center;
     };
+
+    a:hover {
+        transform: scale(1.1);
+    }
     
 `
