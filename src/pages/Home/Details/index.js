@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { Container } from "./styles"
+import { formatDate } from "./utils"
 
 function Details(){
 
@@ -9,7 +10,6 @@ const { id } = useParams()
 const [movie, setMovie] = useState ({})
 const image_path = 'http://image.tmdb.org/t/p/w185/'
 const API_KEY = process.env.REACT_APP_API_KEY
-
 
 useEffect (() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=pt-BR&page=1`)
@@ -21,7 +21,7 @@ useEffect (() => {
             title,
             sinopse: overview,
             image: `${image_path}${poster_path}`,
-            releaseDate: release_date
+            releaseDate: formatDate(release_date)
         }
         setMovie(movie)
 })
