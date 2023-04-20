@@ -23,6 +23,8 @@ $ npm start
 
 ```
 
+OBS: Por motivos de segurança, a chave API não está disponível. É necessário criar um arquivo ".env" com a variável "REACT_APP_API_KEY" recebendo a chave da API.
+
 ## 🛠 Tecnologias
 
 Ferramentas utilizadas:
